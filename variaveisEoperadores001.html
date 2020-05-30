@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos DOM</title>
+</head>
+<body>
+    <h1>Estudos com <strong>DOM!</strong></h1>
+    <p>
+        Olá, segue os <strong>treinos!</strong>
+    </p>
+    <script>
+        let nome = window.prompt("Olá! qual seu nome?");
+        let idade = Number(window.prompt("Digite sua idade"));
+        let permissao;
+        
+        idade>=18?permissao = "Seja bem vindo!":permissao = "Acesso negado";
+        
+        window.alert(permissao);
+
+    </script>
+</body>
+</html>
+<style>
+    h1{
+        font:  italic 24pt arial;
+        color: rgb(255, 248, 224)
+    }
+    body{
+        background: rgb(10, 11, 19);
+        font: normal 18pt arial;
+        color: rgb(255, 208, 55);
+    }
+
+</style>
