@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes DOM!</title>
+</head>
+<style>
+    div#minhaDiv{
+        background: greenyellow;
+        color: rgb(12, 21, 34);
+        font: normal 18pt Arial;
+        width: 200px;       /*largura da div*/
+        height: 200px;      /*altura da div*/
+        line-height: 200px; /*altura do texto*/
+        text-align: center; /*alinhamento do texto*/
+
+    }
+</style>
+<body>
+    <div id="minhaDiv">Cutuque!</div> 
+    <script>
+        var interagir = document.getElementById("minhaDiv") //interagir recebeu <div>
+        interagir.addEventListener("click", clicar);
+        interagir.addEventListener("mouseenter", passarmouse);
+        interagir.addEventListener("mouseout", tirarmouse);
+        //sintaxe para add eventos á variável
+        
+        function clicar(){
+            interagir.innerText = "Foi!";
+            interagir.style.background = "red";
+        }
+        function passarmouse(){
+            interagir.innerText = "Oi!";
+        }
+        function tirarmouse(){
+            interagir.innerText = "Volta :/";
+            interagir.style.background = "greenyellow";
+        }
+    </script>
+</body>
+</html>
