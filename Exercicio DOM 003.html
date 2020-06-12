@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 003</title>
+</head>
+<style>
+h1{font: normal 20pt verdana;
+color: white}
+body{
+    font: normal 15pt verdana;
+    color: white;
+    background-color: rgb(15, 19, 36)
+}
+input#idn1{background-color: rgb(236, 253, 255);}
+input#idn2{background-color: rgb(236, 251, 255);}
+input#idrealizar{background-color: rgb(181, 255, 230);}
+</style>
+<body>
+    <h1>Olá! realize sua soma:</h1>
+    <input type="number" name="idn1" id="idn1"> +
+    <input type="number" name="idn2" id="idn2">
+    <input type="button" value="Realizar" id="idrealizar" onclick="somar()">
+    <div id="resultado">Resultado</div>
+
+</body>
+<script>
+    let n1, n2, soma, resultado;
+    
+    function somar(){
+        //variaveis para receber input
+        n1 = document.getElementById("idn1");
+        n2 = document.getElementById("idn2");
+        //convertendo o input para Number
+        n1 = Number(n1.value);
+        n2 = Number(n2.value);
+        soma = n1 + n2;
+        
+        resultado = document.getElementById("resultado");
+        resultado.innerHTML = `A soma entre "<strong>${n1}</strong>" e 
+        "<strong>${n2}</strong>" é: <strong>${soma}</strong>`
+    }
+</script>
+</html>
