@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF ELSE</title>
+</head>
+<style>
+    h1{
+        background-color:rgb(255, 62, 37);
+        font: normal 24pt impact;
+        color: rgb(229, 243, 242);
+        }
+    body{
+        font: normal 18pt arial;
+        }
+        input#idn1{           
+            color: rgb(229, 243, 242);
+        }
+        input#idn2{         
+            color: rgb(229, 243, 242);
+        }
+</style>
+<body>
+   <h1>Seja bem vindo!</h1>
+   <input type="number" name="idn1" id="idn1"> +
+   <input type="number" name="idn2" id="idn2">
+   <input type="button" value="Realizar soma" onclick="soma()">
+   <div id="div1">Resultado:</div>
+   <script>
+       var n1, n2, numero1, numero2, resultado, divres;
+       function soma()
+       {
+        n1 = document.getElementById("idn1");
+        n2 = document.getElementById("idn2");
+        divres = document.getElementById("div1");
+        
+        n1 = Number(n1.value);
+        n2 = Number(n2.value);
+        resultado = n1+n2;
+        
+        divres.innerHTML = `O resultado é: <strong>${resultado}</strong>`;
+        
+        if (resultado >= 18)
+            {
+           window.alert("Acesso permitido!");
+            }
+        else 
+            {
+           window.alert("Acesso negado");
+            }
+       }
+   </script>
+</body>
+</html>
